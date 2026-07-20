@@ -12,10 +12,8 @@ public class Solution {
             } else {
                 stack.pop();
                 if (stack.isEmpty()) {
-                    // no matching '(' available — this ')' breaks the sequence
                     stack.push(i);
-                } else {
-                    // valid match found — measure length from current base
+                } else { 
                     int len = i - stack.peek();
                     maxLen = Math.max(maxLen, len);
                 }
